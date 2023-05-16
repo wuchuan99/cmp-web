@@ -1,0 +1,42 @@
+.search-field-classify {
+  .field-classify-class {
+    @include flex-start;
+    height: 368px;
+    .tabs {
+      height: 100%;
+      flex-shrink: 0;
+      background-color: #f3f4f7;
+      border-right: 1px solid #ebeef5;
+      .head {
+        height: 44px;
+        line-height: 44px;
+        padding: 0 10px;
+        font-size: 14px;
+        color: #909399;
+        font-weight: 700;
+      }
+      .tab-list {
+        @include scroll;
+        height: calc(100% - 44px);
+        overflow: auto;
+        .tab {
+          height: 44px;
+          line-height: 44px;
+          color: #909399;
+          padding: 0 10px;
+          cursor: pointer;
+          &.active,
+          &:hover {
+            color: #396fff;
+          }
+        }
+      }
+    }
+    .content {
+      overflow: hidden;
+      flex: 1;
+      height: 100%;
+      border-right: 1px solid #ebeef5;
+    }
+  }
+}

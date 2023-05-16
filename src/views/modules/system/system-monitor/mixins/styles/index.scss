@@ -1,0 +1,92 @@
+@import "~@/style/mixin.scss";
+@import "~@/style/constant.scss";
+.system-monitor {
+  min-height: 100%;
+  padding: 25px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 49%);
+  grid-template-rows: repeat(2);
+  grid-row-gap: 15px;
+  grid-column-gap: 2%;
+  justify-content: center;
+  &.center {
+    justify-content: center;
+    grid-template-columns: 49%;
+    grid-template-rows: 630px;
+  }
+  .system-monitor-card {
+    padding: 15px;
+    @include shadow;
+    background-color: white;
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+  .system-monitor-list {
+    margin-top: 10px;
+    .el-icon-view {
+      color: $themeColor;
+      cursor: pointer;
+      font-size: 16px;
+      top: 3px;
+      position: relative;
+      &.disabled {
+        pointer-events: none;
+        color: gray;
+      }
+    }
+    :deep(.el-switch.is-checked .el-switch__core::after) {
+      margin-left: -13px;
+    }
+    :deep(.el-switch__core) {
+      height: 16px;
+      width: 35px !important;
+      &:after {
+        width: 14px;
+        height: 14px;
+        top: 0;
+      }
+    }
+  }
+  .system-monitor-chart {
+    height: 150px;
+    display: flex;
+    margin-top: 10px;
+    .dashboard-item {
+      height: 100%;
+      width: 33%;
+      border: 1px solid #ebeef5;
+      margin-right: 0.5%;
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+  .system-monitor-line {
+    padding: 10px 0;
+    height: 225px;
+    display: flex;
+    width: 100%;
+    .intLineChartContainer {
+      height: 210px;
+      padding-top: 10px;
+      width: 49.5%;
+      margin-right: 1%;
+      border: 1px solid #ebeef5;
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+  .click {
+    color: $themeColor;
+    font-weight: 600;
+    // font-size: 15px;
+  }
+  .active {
+    color: #67c23a;
+  }
+  .inactive {
+    color: #f56c6c;
+  }
+}

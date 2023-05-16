@@ -1,0 +1,39 @@
+@keyframes leftSlidein {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bottomSlidein {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightSlidein {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

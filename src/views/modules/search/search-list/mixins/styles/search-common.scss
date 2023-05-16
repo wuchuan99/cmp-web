@@ -1,0 +1,20 @@
+$btnBackground: linear-gradient(180deg, #135bd2 0%, #4e7fe2 100%);
+$btnBackgroundHover: linear-gradient(180deg, #4e7fe2 0%, #135bd2 100%);
+@mixin search-button {
+  font-size: 16px;
+  width: 105px;
+  height: 45px;
+  line-height: 45px;
+  background: $btnBackground;
+  border-radius: 2px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: $btnBackgroundHover;
+  }
+  &:active {
+    background: $btnBackground;
+  }
+}

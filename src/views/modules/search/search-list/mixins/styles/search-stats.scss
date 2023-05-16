@@ -1,0 +1,99 @@
+@import "~@/style/constant.scss";
+@import "~@/style/mixin.scss";
+
+.search-stats {
+  width: 367px;
+  padding: 10px;
+  margin-right: 10px;
+  // height: 1322px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px 0px rgba(181, 181, 181, 0.5);
+  & > div {
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px 0 20px;
+  }
+  .stats-title {
+    // width: 80px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #393939;
+    line-height: 60px;
+    padding: 0 20px;
+  }
+  .stats-list {
+    .stats-item {
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      $itemWidth: 240px;
+      display: flex;
+      font-size: 16px;
+      font-weight: 400;
+      color: #54585e;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        background-color: #F5F7FA
+      }
+      span:first-child {
+        width: $itemWidth;
+        padding-left: 60px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      span:last-child {
+        width: calc(100% - $itemWidth);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: #456bea;
+        border-radius: 3px;
+        left: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .stats-tree {
+    padding-left: 28px;
+    margin-bottom: 20px;
+    :deep(.el-tree-node__content) {
+      height: 40px;
+      padding-left: 20px;
+    }
+    :deep(.el-tree-node__expand-icon) {
+      color: #456bea;
+      &.is-leaf {
+        color: transparent;
+      }
+    }
+
+    .stats-tree-item {
+      width: 100%;
+      // @include flex-space-between;
+      span:first-child {
+        font-size: 16px;
+        font-weight: 400;
+        color: #54585e;
+      }
+      span:last-child {
+        font-size: 16px;
+        font-weight: 400;
+        color: #54585e;
+        float: right;
+        width: 105px;
+      }
+    }
+  }
+  .stats-map {
+    width: 100%;
+    height: 212px;
+    // border: 1px solid black;
+  }
+}

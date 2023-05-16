@@ -1,0 +1,38 @@
+:deep(.el-drawer) {
+  &.dark-blue {
+    .card {
+      .search-field-type,
+      .search-field-classify {
+        .field-type-class,
+        .field-classify-class {
+          .tabs {
+            background: #031a4f;
+            border: 1px solid #052a82;
+            border-right: none;
+            .head {
+              color: #d7d7d7;
+              border-bottom: 1px solid #052a82;
+            }
+            .tab-list {
+              &::-webkit-scrollbar-track-piece {
+                background: #031a4f;
+              }
+              &::-webkit-scrollbar-thumb {
+                background: #1d46a3;
+              }
+              .tab {
+                color: #d7d7d7;
+                &.active {
+                  color: #396fff;
+                }
+              }
+            }
+          }
+          .content {
+            border-right: 1px solid #052a82;
+          }
+        }
+      }
+    }
+  }
+}

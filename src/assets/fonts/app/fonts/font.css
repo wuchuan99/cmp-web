@@ -1,0 +1,125 @@
+@font-face {
+    font-family: tas-iconfont;
+    src: url("tas-iconfont.woff?bfef4f12") format("woff"),
+             url("tas-iconfont.ttf?bfef4f12") format("truetype"),
+             url("tas-iconfont.svg?bfef4f12#tas-iconfont") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="tas-iconfont"], [class*=" tas-iconfont"] {
+    font-family: 'tas-iconfont' !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+}
+
+
+.tas-iconfont-A::before {
+    content: "\554a";
+}
+
+.tas-iconfont-B::before {
+    content: "\554b";
+}
+
+.tas-iconfont-C::before {
+    content: "\554c";
+}
+
+.tas-iconfont-D::before {
+    content: "\554d";
+}
+
+.tas-iconfont-E::before {
+    content: "\554e";
+}
+
+.tas-iconfont-F::before {
+    content: "\554f";
+}
+
+.tas-iconfont-G::before {
+    content: "\5550";
+}
+
+.tas-iconfont-H::before {
+    content: "\5551";
+}
+
+.tas-iconfont-I::before {
+    content: "\5552";
+}
+
+.tas-iconfont-J::before {
+    content: "\5553";
+}
+
+.tas-iconfont-K::before {
+    content: "\5554";
+}
+
+.tas-iconfont-L::before {
+    content: "\5555";
+}
+
+.tas-iconfont-M::before {
+    content: "\5556";
+}
+
+.tas-iconfont-N::before {
+    content: "\5557";
+}
+
+.tas-iconfont-O::before {
+    content: "\5558";
+}
+
+.tas-iconfont-P::before {
+    content: "\5559";
+}
+
+.tas-iconfont-Q::before {
+    content: "\555a";
+}
+
+.tas-iconfont-R::before {
+    content: "\555b";
+}
+
+.tas-iconfont-S::before {
+    content: "\555c";
+}
+
+.tas-iconfont-T::before {
+    content: "\555d";
+}
+
+.tas-iconfont-U::before {
+    content: "\555e";
+}
+
+.tas-iconfont-V::before {
+    content: "\555f";
+}
+
+.tas-iconfont-W::before {
+    content: "\5560";
+}
+
+.tas-iconfont-X::before {
+    content: "\5561";
+}
+
+.tas-iconfont-Y::before {
+    content: "\5562";
+}
+
+.tas-iconfont-Z::before {
+    content: "\5563";
+}
+
+.tas-iconfont-zlogo::before {
+    content: "\5564";
+}
+

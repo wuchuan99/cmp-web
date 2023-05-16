@@ -1,0 +1,62 @@
+@import "~@/style/constant.scss";
+@import "~@/style/mixin.scss";
+@import "./search-common.scss";
+.search-input {
+  width: 100%;
+  padding: 15px 0;
+  @include flex-align-center;
+  input {
+    width: calc(100% - 250px);
+    height: 45px;
+    box-shadow: 0px 2px 4px 0px rgba(137, 136, 136, 0.25);
+    background: white;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    color: #55585d;
+    text-indent: 20px;
+    transition: border 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &::placeholder {
+      color: #b8b8b8;
+    }
+    &:hover,
+    &:focus-visible,
+    &:focus,
+    &:active {
+      border: 1px solid #409eff;
+      outline: none;
+    }
+  }
+  .search-input-button {
+    margin-left: 20px;
+    @include search-button;
+  }
+}
+:deep(.tips-search) {
+  flex: 1;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(137, 136, 136, 0.25);
+  height: 45px;
+  .fields-list,
+  .operators-list,
+  .connects-list {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0px 2px 4px 0px rgba(137, 136, 136, 0.25);
+    .fields-item,
+    .operators-item,
+    .connects-item {
+      &.active {
+        background-color: #F5F7FA;
+      }
+      &.tips {
+        color: #999;
+      }
+    }
+  }
+}
+:deep(.el-input) {
+  .el-input__inner {
+    color: #333 !important;
+  }
+}

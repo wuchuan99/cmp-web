@@ -1,0 +1,81 @@
+@import "~@/style/mixin.scss";
+.asset-ledger {
+  height: 100%;
+  padding: 25px 0;
+  .header {
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.17);
+    padding: 20px;
+    .operation-box {
+      @include flex-space-between;
+      .operation {
+        @include flex-start;
+        .title {
+          width: 80px;
+          height: 36px;
+          border-radius: 4px;
+          border: 1px solid #979797;
+          @include flex-space-between;
+          padding: 0 10px 0 15px;
+          font-size: 13px;
+          color: #666;
+          i {
+            color: #979797;
+          }
+        }
+      }
+      .bottons {
+        @include flex-start;
+        .search {
+          margin-left: 15px;
+        }
+      }
+    }
+    .senior {
+      margin-top: 20px;
+    }
+  }
+  .all-selection {
+    padding-bottom: 10px;
+  }
+  .table {
+    padding: 20px 20px 0;
+    margin-top: 16px;
+    height: calc(100% - 217px);
+    background-color: white;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.17);
+    font-size: 16px;
+    overflow: auto;
+    @include scroll;
+    :deep(.cell) {
+      .component {
+        margin-top: 2px;
+        height: 46px;
+        line-height: 46px;
+        &:first-of-type {
+          margin-top: 0;
+        }
+        &:nth-of-type(5n + 1) {
+          background-color: rgba(160, 180, 244, 0.03);
+        }
+        &:nth-of-type(5n + 2) {
+          background-color: rgba(160, 180, 244, 0.08);
+        }
+        &:nth-of-type(5n + 3) {
+          background-color: rgba(160, 180, 244, 0.15);
+        }
+        &:nth-of-type(5n + 4) {
+          background-color: rgba(160, 180, 244, 0.25);
+        }
+        &:nth-of-type(5n + 5) {
+          background-color: rgba(160, 180, 244, 0.35);
+        }
+      }
+    }
+    .pagination-container {
+      padding: 30px 10px;
+    }
+  }
+  @include status;
+}

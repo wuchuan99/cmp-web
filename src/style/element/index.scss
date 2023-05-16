@@ -1,0 +1,79 @@
+@import "~@/style/mixin.scss";
+@import "./constant.scss";
+@import "./el-drawer/theme/dark-blue.scss";
+@import "./el-confirm/theme/dark-blue.scss";
+// element弹窗
+.el-message {
+  top: 60px !important;
+}
+.el-table {
+  .el-table__header {
+    thead {
+      tr {
+        th.el-table__cell {
+          background-color: #F3F4F7;
+        }
+      }
+    }
+  }
+  .el-table__body-wrapper {
+    overflow: auto;
+    overflow-x: hidden;
+    height: calc(100% - 44px) !important;
+    @include scroll;
+    .el-table__body {
+      .el-table__row {
+        &.current-row {
+          >td.el-table__cell {
+            background-color: rgb(231, 239, 251) !important;
+          }
+        }
+        .el-table__cell {
+          .cell {
+            &-operation {
+              >span {
+                cursor: pointer;
+                &.primary {
+                  color: $themeColor;
+                }
+                &.danger {
+                  color: #f56c6c;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .el-loading-mask {
+    z-index: 100 !important;
+  }
+}
+
+//按钮
+.el-button {
+  &.el-button--text {
+    color: $themeColor;
+    &.danger {
+      color: $dangerColor;
+    }
+    &.is-disabled {
+      opacity: 0.5;
+      &:hover {
+        color: $themeColor;
+      }
+      &.danger {
+        &:hover {
+          color: $dangerColor;
+        }
+      }
+    }
+  }
+}
+
+
+.el-tooltip__popper {
+  word-break: break-all;
+}

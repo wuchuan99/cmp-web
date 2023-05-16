@@ -1,0 +1,19 @@
+@import "./dark-blue.scss";
+:deep(.card) {
+  padding: 0;
+  margin-bottom: 20px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  .card__header {
+    padding: 0;
+    padding-bottom: 15px;
+    border-bottom: 0;
+  }
+  .card__body {
+    padding-right: 0;
+  }
+}
+
+
+

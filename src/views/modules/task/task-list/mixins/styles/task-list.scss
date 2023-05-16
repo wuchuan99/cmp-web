@@ -1,0 +1,200 @@
+@import "~@/style/constant.scss";
+@import "~@/style/mixin.scss";
+
+.task-list {
+  height: 100%;
+  padding: 25px 0;
+  .header {
+    background-color: white;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.17);
+    width: 100%;
+    padding: 20px;
+    .task-list-buttons {
+      @include flex-end;
+      .task-list-buttons-search {
+        margin-left: 15px;
+      }
+    }
+  }
+  .task-list-container {
+    width: 100%;
+    padding: 40px 0;
+    .task-list-container-card {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .task-list-container-box {
+      width: 384px;
+      // height: 240px;
+      background: #ffffff;
+      margin: 0 21px 15px 0;
+      box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.17);
+      padding: 10px 12px;
+      border-radius: 3px;
+      &:nth-child(4n) {
+        margin: 0 0 40px 0;
+      }
+      .task-name {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 20px;
+        width: 100%;
+        font-weight: 600;
+        font-size: 15px;
+        color: black;
+        .flex-center {
+          .task-name-i {
+            height: 13px;
+            width: 3px;
+            margin-right: 8px;
+            border-radius: 1px;
+            background-color: $themeColor;
+          }
+          .task-name-text {
+            cursor: pointer;
+            color: $themeColor;
+          }
+        }
+
+        .task-name-close {
+          color: rgba(0, 0, 0, 0.65);
+          cursor: pointer;
+          transition: all 0.2s linear;
+          position: relative;
+          &:hover,
+          &:active {
+            font-size: 17px;
+          }
+        }
+      }
+
+      .task-progress {
+        margin-bottom: 15px;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 600;
+        .task-progress-title {
+          color: black;
+          @include flex-align-center;
+          justify-content: space-between;
+          padding-right: 51px;
+          .task-progress-title-buttons {
+            span {
+              margin-left: 10px;
+              &:hover {
+                color: $themeColor;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        :deep(.el-progress) {
+          margin: 6px 0 5px;
+          white-space: nowrap;
+          .el-progress__text {
+            color: $themeColor;
+            font-size: 12px !important;
+            margin-left: 15px;
+          }
+        }
+        .task-progress-remainder-time {
+          span {
+            color: #898989;
+            font-size: 12px;
+            font-weight: 400;
+            transform: scale(0.8) translateX(-8px);
+            display: inline-block;
+          }
+        }
+      }
+
+      .task-start-time {
+        margin-bottom: 15px;
+        height: 17px;
+        font-size: 12px;
+        color: #333333;
+        line-height: 17px;
+      }
+
+      .task-count {
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+
+        .task-count-box {
+          width: 25%;
+          @include flex-align-center;
+          img {
+            margin-right: 8px;
+          }
+          .task-count-box-count {
+            width: calc(100% - 43px);
+            text-align: left;
+            font-weight: 400;
+            & > div {
+              color: #646262;
+              font-size: 12px;
+              overflow: hidden;
+              &:last-child {
+                margin-top: 3px;
+              }
+              transform: scale(0.9);
+            }
+          }
+        }
+      }
+
+      .task-detail {
+        @include flex-space-between;
+        font-size: 12px;
+        font-weight: 400;
+        color: #747474;
+        .down-btn {
+          color: #747474;
+          cursor: pointer;
+          font-size: 18px;
+          i {
+            font-weight: 700;
+          }
+          &.loading {
+            opacity: .5;
+            pointer-events: none;
+          }
+        }
+        .detail-text {
+          cursor: pointer;
+          transition: all 0.2s linear;
+          position: relative;
+          &:hover,
+          &:active {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .task-list-container2 {
+    width: 100%;
+    height: calc(100% - 100px);
+    padding-top: 40px;
+    & > div {
+      height: 100%;
+      background-color: white;
+      padding: 20px;
+    }
+    :deep(.el-progress) {
+      white-space: nowrap;
+    }
+  }
+}
+.disabled {
+  color: gray;
+  pointer-events: none;
+}
+.click {
+  color: $themeColor;
+}

@@ -1,0 +1,103 @@
+@import "./constant.scss";
+/**
+* mixin混入 在css中引入
+* @import "~@/style/mixin.scss";
+*/
+@mixin clearFloat {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.17);
+}
+
+@mixin scroll {
+  &::-webkit-scrollbar-track-piece {
+    background: white;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #d3d3d3;
+    border-radius: 20px;
+  }
+}
+
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin click {
+  cursor: pointer;
+  transition: all 0.2s linear;
+  position: relative;
+  &:hover,
+  &:active {
+    font-size: 15px;
+  }
+}
+
+@mixin button-click {
+  cursor: pointer;
+  transition: all 0.2s linear;
+  position: relative;
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+// 状态
+@mixin status {
+  .success {
+    color: #67c23a;
+  }
+  .warning {
+    color: #e6a23c;
+  }
+  .danger {
+    color: $dangerColor;
+  }
+  .info {
+    color: #606266;
+  }
+  .theme {
+    color: $themeColor;
+  }
+}

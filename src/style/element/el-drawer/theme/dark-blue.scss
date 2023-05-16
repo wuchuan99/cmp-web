@@ -1,0 +1,125 @@
+.el-drawer {
+  &.dark-blue {
+    background: #021542;
+    .el-drawer__header {
+      color: #d7d7d7;
+    }
+    .card {
+      background: #021542;
+      color: #d7d7d7;
+      .card__header {
+        .card__header_default {
+          .title {
+            border-left: 3px solid #1d46a3;
+          }
+        }
+      }
+    }
+    .el-table {
+      background: #021542;
+      color: #d7d7d7;
+      border: 1px solid #052a82;
+      &::before {
+        background: #052a82;
+      }
+      &::after {
+        background: #052a82;
+      }
+      .el-table__header {
+        th.el-table__cell {
+          background: #021542;
+          color: #ebeef5;
+          &.is-leaf {
+            border-bottom: 1px solid #052a82;
+          }
+          &.gutter {
+            border-bottom: 1px solid #052a82;
+          }
+        }
+      }
+      .el-table__body-wrapper {
+        &::-webkit-scrollbar-track-piece {
+          background: #031a4f;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #1d46a3;
+        }
+        .el-table__body {
+          td.el-table__cell {
+            background: #021542;
+            color: #d7d7d7;
+            border-bottom: 1px solid #052a82;
+            .cell-operation {
+              .primary {
+                color: #d7d7d7;
+              }
+            }
+          }
+        }
+      }
+
+      tr {
+        background: #021542;
+        color: #d7d7d7;
+        border-color: #052a82;
+        td {
+          background: #021542;
+          color: #d7d7d7;
+          border-color: #052a82;
+        }
+      }
+      &.el-table--border {
+        border-right: none;
+        border-bottom: none;
+        .el-table__cell {
+          border-right: 1px solid #052a82;
+        }
+      }
+      &.el-table--fit {
+        border-right: none;
+        border-bottom: none;
+      }
+    }
+    .el-form {
+      .el-form-item {
+        .el-form-item__label {
+          color: #d7d7d7;
+        }
+      }
+    }
+    .el-input {
+      .el-input__inner {
+        background-color: transparent;
+        border-color: #d7d7d7;
+        color: #d7d7d7;
+      }
+      &.is-disabled {
+        .el-input__inner {
+          color: rgba(215, 215, 215, .6)
+        }
+      }
+    }
+    .el-drawer__body {
+      .slot {
+        &::-webkit-scrollbar-track-piece {
+          background: #031a4f;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #1d46a3;
+        }
+      }
+    }
+    .demo-drawer__footer {
+      .close {
+        background: #fff;
+        border: none;
+        color: #606266;
+      }
+      .primary {
+        background: #135BD2;
+        border: none;
+        color: #fff;
+      }
+    }
+  }
+}

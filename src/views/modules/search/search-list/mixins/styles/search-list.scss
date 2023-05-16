@@ -1,0 +1,135 @@
+@import "~@/style/mixin.scss";
+
+.search-list {
+  $leftWidth: 309px;
+  .asset-container {
+    width: 100%;
+    height: 282px;
+    display: flex;
+    margin-bottom: 10px;
+    .asset-left {
+      width: $leftWidth;
+      background: #ffffff;
+      box-shadow: 0px 2px 4px 0px rgba(205, 205, 205, 0.5);
+      $assetIpHeight: 60px;
+      .asset-ip {
+        height: $assetIpHeight;
+        @include flex-center;
+        .asset-ip-title {
+          font-size: 25px;
+          font-weight: 600;
+          color: #445e92;
+          padding-left: 15px;
+          @include button-click;
+        }
+        img {
+          padding-left: 15px;
+          @include button-click;
+        }
+      }
+      .asset-info {
+        height: calc(100% - $assetIpHeight);
+        .asset-info-item {
+          @include flex-center;
+          height: 40px;
+          line-height: 40px;
+          padding: 0 15px;
+          img {
+            padding-right: 15px;
+          }
+          span:nth-of-type(1) {
+            font-size: 16px;
+            font-weight: 600;
+            color: #4d5056;
+            flex-shrink: 0;
+          }
+          span:nth-of-type(2) {
+            font-size: 16px;
+            font-weight: 400;
+            color: #4d5056;
+            width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &.deviceType {
+              flex: 1;
+              margin-right: 10px;
+            }
+          }
+          .tag {
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+    .asset-right {
+      $rightHeight: 57px;
+      width: calc(100% - $leftWidth);
+      background: #ffffff;
+      border-left: 1px solid #e8e8e8;
+      .asset-port {
+        height: $rightHeight;
+        @include flex-center;
+        .asset-port-box,
+        .asset-protocol-box {
+          min-width: 75px;
+          height: 31px;
+          line-height: 31px;
+          border-radius: 2px;
+          font-size: 18px;
+          font-weight: 500;
+          color: #ffffff;
+          text-align: center;
+          padding: 0 8px;
+        }
+        .asset-port-box-title {
+          background: #669dff;
+          margin: 0 11px 0 18px;
+        }
+        .asset-protocol-box-title {
+          background: #6681ff;
+        }
+      }
+
+      .asset-html {
+        height: calc(100% - $rightHeight);
+        border-top: 1px solid #e8e8e8;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #6e747d;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        >div {
+          width: calc(50% - 5px);
+          height: 100%;
+          position: relative;
+          &.certificate-box {
+            margin-left: 10px;
+          }
+          &.onlySelf {
+            width: 100%;
+          }
+          .copy-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: #6681ff;
+            height: 32px;
+            min-width: 60px;
+          }
+          >div {
+            @include scroll;
+            height: 100%;
+            padding: 10px 15px;
+            overflow: auto;
+            white-space: pre-wrap;
+            border: 1px solid #e8e8e8;
+            background: rgba(233, 242, 255, 0.57);
+          }
+        }
+      }
+    }
+  }
+}

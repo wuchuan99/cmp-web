@@ -1,0 +1,21 @@
+@import "~@/style/mixin.scss";
+@import "../mixins/styles/search-common.scss";
+.search-time {
+  width: 100%;
+  padding-bottom: 10px;
+  .search-time-container {
+    @include flex-space-between;
+    padding: 10px;
+    width: 100%;
+    height: 64px;
+    background: #ffffff;
+    box-shadow: 0px 2px 4px 0px rgba(198, 198, 198, 0.5);
+    color: #6ca7ff;
+    .search-time-button {
+      @include search-button;
+      height: 40px;
+      line-height: 40px;
+      widows: 102px;
+    }
+  }
+}

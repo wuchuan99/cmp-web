@@ -1,0 +1,42 @@
+.el-message-box {
+  &.dark-blue {
+    background: #021542;
+    border: none;
+    .el-message-box__header {
+      .el-message-box__title {
+        color: #d7d7d7;
+      }
+    }
+    .el-message-box__content {
+      .el-message-box__container {
+        .el-message-box__message {
+          color: #d7d7d7;
+        }
+      }
+    }
+    .el-message-box__headerbtn {
+      .el-icon-close {
+        color: #d7d7d7;
+      }
+    }
+    .el-message-box__btns {
+      .el-button.el-button--default {
+        &:hover {
+          color: #606266;
+          border-color: #DCDFE6;
+          background: #fff;
+        }
+      }
+      .el-button.el-button--default.el-button--primary {
+        background: #135BD2;
+        border-color: #135BD2;
+        &:hover {
+          color: #fff;
+          background: #135BD2;
+          border-color: #135BD2;
+        }
+      }
+    }
+
+  }
+}
